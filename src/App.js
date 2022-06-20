@@ -37,19 +37,18 @@ function App() {
 
   return (
     <>
-    {/* <Router> */}
+
 
     <Navbar title="TextUtils" about = "About Us" mode={mode} toggleMode = {toggleMode}></Navbar>
+    <div style={{height : '40px'}}>
       <Alert alert = {alert}></Alert>
+    </div>
       <div className="container my-3">
       <Textarea showAlert= {showAlert} heading ="Enter Your Text Here" mode={mode}></Textarea>
-      {/* <Routes> */}
-        {/* <Route exact path="/" element={  } /> */}
-        {/* <Route exact path="about" element={ <AboutUs/> } /> */}
-      {/* </Routes> */}
+   
       </div>
 
-    {/* </Router> */}
+
     </>
   );
 }
