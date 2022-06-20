@@ -39,34 +39,24 @@ export default function TextArea(props) {
     setText(newText);
   }
   
-  let i=0;
-  const fontChangerClick = ()=>{
-    if(text === ''){
-        props.showAlert('Empty ! Cannot change font' , 'danger');
-        return;
-    }
-    // let i = Math.floor(Math.random()*fonts.length);
-    const fonts = ['Comic Sans MS','Tahoma' , 'Arial Black' ,'Times New Roman'];
-    document.getElementById('textInput').style.fontFamily= `${fonts[i]}`;
-    // console.log(fonts[i]);
-    if(i<fonts.length-1)
-    i++;
-    else
-    i=0;
-    // props.showAlert('Font Changed !' , 'success');
-    // setText(newText);
-  }
-//   let size = 18;
-//   const fontSizeIncClick = ()=>{
-//     document.getElementById('textInput').style.fontSize = `${size}px`;
-//     size+=2;
-//     console.log(size);
-//   }
-//   const fontSizeDecClick = ()=>{
-//     document.getElementById('textInput').style.fontSize = `${size}px`;
-//     size-=2;
-//     console.log(size);
-//   }
+  // let i=0;
+  // const fontChangerClick = ()=>{
+  //   if(text === ''){
+  //       props.showAlert('Empty ! Cannot change font' , 'danger');
+  //       return;
+  //   }
+  //   // let i = Math.floor(Math.random()*fonts.length);
+  //   const fonts = ['Comic Sans MS','Tahoma' , 'Arial Black' ,'Times New Roman'];
+  //   document.getElementById('textInput').style.fontFamily= `${fonts[i]}`;
+  //   // console.log(fonts[i]);
+  //   if(i<fonts.length-1)
+  //   i++;
+  //   else
+  //   i=0;
+  //   // props.showAlert('Font Changed !' , 'success');
+  //   // setText(newText);
+  // }
+
 
   const copyTextClick = ()=>{
     props.showAlert('Copied Text !!' , 'success');
@@ -90,9 +80,10 @@ export default function TextArea(props) {
   }
 
   function countWords(str) {
-    const arr = str.split(' ');
-  
-    return arr.filter(word => word !== '').length;
+    // let arr = str.split(' ');
+    let arr2 = str.split(/[\s ]+/);
+    let ans =  arr2.filter(word => word !== '').length ;
+    return ans;
   }
   return (
     <>
@@ -103,7 +94,7 @@ export default function TextArea(props) {
         <button className='btn btn-primary my-2 mx-1 my-1' onClick={upperCaseClick}>To Upper Case</button>
         <button className='btn btn-primary mx-1 my-1' onClick={lowerCaseClick}>To Lower Case</button>
         <button className='btn btn-primary mx-1 my-1' onClick={clearClick}>Clear Text</button>
-        <button className='btn btn-primary mx-1 my-1' onClick={fontChangerClick}>Font</button>
+        {/* <button className='btn btn-primary mx-1 my-1' onClick={fontChangerClick}>Font</button> */}
         {/* <button className='btn btn-primary mx-1' onClick={fontSizeIncClick}>Font Size (increase)</button> */}
         {/* <button className='btn btn-primary mx-1' onClick={fontSizeDecClick}>Font Size (decrease)</button> */}
         <button className='btn btn-primary mx-1 my-1' onClick={copyTextClick}>Copy Text</button>
