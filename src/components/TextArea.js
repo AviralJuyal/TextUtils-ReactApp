@@ -103,7 +103,7 @@ export default function TextArea(props) {
         <button className='btn btn-primary my-2 mx-1 my-1' onClick={upperCaseClick}>To Upper Case</button>
         <button className='btn btn-primary mx-1 my-1' onClick={lowerCaseClick}>To Lower Case</button>
         <button className='btn btn-primary mx-1 my-1' onClick={clearClick}>Clear Text</button>
-        {/* <button className='btn btn-primary mx-1 my-1' onClick={fontChangerClick}>Font</button> */}
+        <button className='btn btn-primary mx-1 my-1' onClick={fontChangerClick}>Font</button>
         {/* <button className='btn btn-primary mx-1' onClick={fontSizeIncClick}>Font Size (increase)</button> */}
         {/* <button className='btn btn-primary mx-1' onClick={fontSizeDecClick}>Font Size (decrease)</button> */}
         <button className='btn btn-primary mx-1 my-1' onClick={copyTextClick}>Copy Text</button>
