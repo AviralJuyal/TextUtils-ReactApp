@@ -100,14 +100,14 @@ export default function TextArea(props) {
             
         <h1>{props.heading}</h1>
         <textarea className = {`form-control text-${props.mode === 'dark'?'light':'dark'} bg-${props.mode}`} spellCheck="true"  name="text" value={text} onChange={onChangeFunc} id="textInput" cols="100" rows="10"></textarea>
-        <button className='btn btn-primary my-2 mx-1' onClick={upperCaseClick}>To Upper Case</button>
-        <button className='btn btn-primary mx-1' onClick={lowerCaseClick}>To Lower Case</button>
-        <button className='btn btn-primary mx-1' onClick={clearClick}>Clear Text</button>
-        <button className='btn btn-primary mx-1' onClick={fontChangerClick}>Font</button>
+        <button className='btn btn-primary my-2 mx-1 my-1' onClick={upperCaseClick}>To Upper Case</button>
+        <button className='btn btn-primary mx-1 my-1' onClick={lowerCaseClick}>To Lower Case</button>
+        <button className='btn btn-primary mx-1 my-1' onClick={clearClick}>Clear Text</button>
+        {/* <button className='btn btn-primary mx-1 my-1' onClick={fontChangerClick}>Font</button> */}
         {/* <button className='btn btn-primary mx-1' onClick={fontSizeIncClick}>Font Size (increase)</button> */}
         {/* <button className='btn btn-primary mx-1' onClick={fontSizeDecClick}>Font Size (decrease)</button> */}
-        <button className='btn btn-primary mx-1' onClick={copyTextClick}>Copy Text</button>
-        <button className='btn btn-primary mx-1' onClick={extraSpaceClick}>Remove Extra Spaces</button>
+        <button className='btn btn-primary mx-1 my-1' onClick={copyTextClick}>Copy Text</button>
+        <button className='btn btn-primary mx-1 my-1' onClick={extraSpaceClick}>Remove Extra Spaces</button>
 
     </div>
     <div className={`container my-3 text-${props.mode === 'dark'?'light':'dark'}`}>
